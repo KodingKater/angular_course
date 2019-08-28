@@ -1,5 +1,3 @@
-import {Component, OnInit} from '@angular/core';
-
 @Component({
   // tslint:disable-next-line:component-selector
   selector: 'books',
@@ -9,6 +7,7 @@ import {Component, OnInit} from '@angular/core';
 export class BooksComponent implements OnInit {
   bookTitle: string;
   price: number
+  timestamp = () => console.log(Date.now()) ;
 
   constructor() {
     this.bookTitle = '"Hunde für Anfänger"';
@@ -18,4 +17,7 @@ export class BooksComponent implements OnInit {
   ngOnInit() {
   }
 
+
 }
+
+import {Component, OnInit} from '@angular/core';
