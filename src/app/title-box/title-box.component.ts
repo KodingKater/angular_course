@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -8,6 +8,8 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class TitleBoxComponent implements OnInit {
   @Input() titleToShow: string;
+  @Output() titleClicked =  new EventEmitter<string>();
+
 
   constructor() {
     this.titleToShow = 'NoTitle provided';
@@ -16,4 +18,7 @@ export class TitleBoxComponent implements OnInit {
   ngOnInit() {
   }
 
+  sendPing() {
+    this.titleClicked.emit('Yo, I bims dein lieber Title.');
+  }
 }

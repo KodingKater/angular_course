@@ -7,7 +7,7 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <navigation></navigation>
-<title-box [titleToShow]="superFancyOtherTitle"></title-box>
+<title-box (titleClicked)="onTitleClick($event)" [titleToShow]="superFancyOtherTitle"></title-box>
 <books></books>
 <about></about>
 <info-box></info-box>
