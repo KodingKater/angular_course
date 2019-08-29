@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class MouseCursorComponent implements OnInit {
   x: number;
   y: number;
-
+  mouseButtonCounter = 0;
 
   constructor() {
   }
@@ -16,6 +16,10 @@ export class MouseCursorComponent implements OnInit {
   onMouseMove(event: MouseEvent){
     this.x = event.clientX;
     this.y = event.clientY;
+  }
+
+  onMouseClick(event: MouseEvent){
+    this.mouseButtonCounter += 1;
   }
 
   ngOnInit() {
