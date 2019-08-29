@@ -1,17 +1,15 @@
 import { Injectable } from '@angular/core';
 import {Book} from './book';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class BookDataService {
 
   getBooks(): Book[]
   {
     return [
       {
-        title: 'Design Patterns für den Mops',
-        subtitle: 'Elements of Reusable Object-Oriented Software',
+        title: 'Design Patterns für den Mops und die Katze',
+        subtitle: 'Auch Tiere produzieren schönen Code.',
         isbn: '978-0-20163-361-0',
         abstract: 'Capturing a wealth of experience about the design of object-oriented software, four top-notch designers present a catalog of simple and succinct solutions to commonly occurring design problems. Previously undocumented, these 23 patterns allow designers to create more flexible, elegant, and ultimately reusable designs without having to rediscover the design solutions themselves.',
         numPages: 395,
