@@ -11,6 +11,7 @@ export class AppComponent {
   superFancyOtherTitle = 'Horst-Rüdiger Ludooolf';
 
   onTitleClick(event: string) {
-    this.superFancyOtherTitle = event;
+    // this.superFancyOtherTitle = event;
+    console.log(event);
   }
 }
