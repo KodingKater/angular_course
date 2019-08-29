@@ -11,7 +11,6 @@ export class BookDataService {
   private baseUrl = 'http://localhost:4730/books';
 
   getBooks(): Observable<Book[]> {
-     //return of(this.books);
      return this.http.get<Book[]>(this.baseUrl);
   }
 

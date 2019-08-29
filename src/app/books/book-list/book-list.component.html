@@ -1,4 +1,4 @@
-<table class="table">
+<table *ngIf="!errorMessage" class="table">
   <tr>
     <th>#</th>
     <th>Title</th>
@@ -14,3 +14,5 @@
     <td><a href="{{book.publisher.url}}">{{book.publisher.name}}</a></td>
   </tr>
 </table>
+
+<div style="background-color: #ff2128" *ngIf="errorMessage"><h2>{{errorMessage}}</h2></div>
