@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'mouse-cursor',
@@ -9,6 +9,7 @@ export class MouseCursorComponent implements OnInit {
   x: number;
   y: number;
   mouseButtonCounter = 0;
+  customStyle = 'font-size: 8pt;';
 
   constructor() {
   }
@@ -20,6 +21,7 @@ export class MouseCursorComponent implements OnInit {
 
   onMouseClick(event: MouseEvent){
     this.mouseButtonCounter += 1;
+    this.customStyle = 'style="font-size:' + this.mouseButtonCounter + 'pt;"';
   }
 
   ngOnInit() {

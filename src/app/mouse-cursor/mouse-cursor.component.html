@@ -1,3 +1,8 @@
-<div (mousemove)="onMouseMove($event)" (mousedown)="onMouseClick($event)" style="height: 200px; width: 400px; border: 1px solid"></div>
+<div
+  (mousemove)="onMouseMove($event)"
+  (mousedown)="onMouseClick($event)"
+  style="height: 200px; width: 400px; border: 1px solid"
+></div>
 <span>X:{{x}} - Y:{{y}}</span>
-<span>Clicked-#: {{mouseButtonCounter}}</span>
+
+<!-- <span [customStyle]="customStyle" >Clicked-#: {{mouseButtonCounter}}</span> -->
