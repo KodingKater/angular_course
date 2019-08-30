@@ -34,4 +34,9 @@ export class BookDetailComponent implements OnInit, OnDestroy {
     this.subscription.forEach(x => x.unsubscribe());
   }
 
+  generateArray(obj) {
+    return Object.keys(obj).map((objKey) => {
+      return {key: objKey, value: obj[objKey]};
+    });
+  }
 }

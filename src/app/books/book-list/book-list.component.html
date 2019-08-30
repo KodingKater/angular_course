@@ -1,7 +1,10 @@
 <table *ngIf="!errorMessage" class="table">
   <tr>
-    <th></th>
-    <th><h2>{{book.title}}</h2></th>
+    <th>#</th>
+    <th>Title</th>
+    <th>Author</th>
+    <th>Anzahl Seiten</th>
+    <th>Publisher</th>
   </tr>
   <tr *ngFor="let book of bookListe; let i = index">
     <td>{{i}}</td>

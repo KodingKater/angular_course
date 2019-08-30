@@ -1,9 +1,11 @@
 <table *ngIf="!errorMessage" class="table">
   <tr>
+    <th></th>
     <th><h2>{{bookToShow.title}}</h2></th>
   </tr>
-  <tr>
-    <td>{{bookToShow.abstract}}</td>
+  <tr *ngFor="let item of generateArray(bookToShow)">
+    <td  *ngIf="item.key != 'title'"><h3>{{item.key | titlecase}}</h3></td>
+    <td  *ngIf="item.key != 'title'">{{item.value.toString()}}</td>
   </tr>
 </table>
 
