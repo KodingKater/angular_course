@@ -7,13 +7,16 @@ import { BookListComponent } from './book-list/book-list.component';
 import {BookDataService} from './book-data.service';
 import {HttpClientModule} from '@angular/common/http';
 import { BookDetailComponent } from './book-detail/book-detail.component';
+import { BookEditComponent } from './book-edit/book-edit.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
-  declarations: [BooksComponent, BookListComponent, BookDetailComponent],
+  declarations: [BooksComponent, BookListComponent, BookDetailComponent, BookEditComponent],
   imports: [
     CommonModule,
     BooksRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   exports: [BooksComponent, BookListComponent, BookDetailComponent],
   providers: [BookDataService]

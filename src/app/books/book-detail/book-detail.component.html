@@ -1,9 +1,8 @@
 <table *ngIf="!errorMessage" class="table">
   <tr>
-    <th></th>
+    <th><a [routerLink]="['edit']" >Edit</a></th>
     <th><h2>{{bookToShow.title}}</h2></th>
   </tr>
-<!--  <tr *ngFor="let item of generateArray(bookToShow)">-->
   <tr *ngFor="let item of bookToShow | keyvalue">
     <td  *ngIf="item.key != 'title'"><h3>{{item.key | titlecase}}</h3></td>
     <td  *ngIf="item.key != 'title'">{{item.value.toString()}}</td>

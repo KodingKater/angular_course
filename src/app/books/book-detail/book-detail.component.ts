@@ -21,6 +21,9 @@ export class BookDetailComponent implements OnInit, OnDestroy {
 
   constructor(private router: ActivatedRoute, private service: BookDataService) {
     this.subscription = [];
+    this.bookToShow = {
+      abstract: '', author: '', isbn: '', numPages: 0, publisher: {name: '', url: ''}, subtitle: '', title: ''
+    };
   }
 
   ngOnInit() {
@@ -32,11 +35,5 @@ export class BookDetailComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.subscription.forEach(x => x.unsubscribe());
-  }
-
-  generateArray(obj) {
-    return Object.keys(obj).map((objKey) => {
-      return {key: objKey, value: obj[objKey]};
-    });
   }
 }
