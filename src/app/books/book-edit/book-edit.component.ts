@@ -31,7 +31,7 @@ export class BookEditComponent implements OnInit, OnDestroy {
     this.subscription.forEach(x => x.unsubscribe());
   }
 
-  save(value: any) {
-    console.log(value);
+  save(changedBook: Book) {
+    this.service.updateBooks(changedBook).subscribe( (x) => this.book = x);
   }
 }

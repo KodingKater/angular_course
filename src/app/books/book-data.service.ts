@@ -10,14 +10,24 @@ export class BookDataService {
   books: Book[];
   private baseUrl = 'http://localhost:4730';
 
-  getBooks(): Observable<Book[]> {
-     return this.http.get<Book[]>(this.baseUrl + '/books');
-  }
-
   constructor(private http: HttpClient) {
   }
 
-  getBookDetailByIsbn(isbn: any): Observable<Book> {
+
+  getBooks(): Observable<Book[]> {
+    return this.http.get<Book[]>(this.baseUrl + '/books');
+  }
+
+  createBook(book: Book): Observable<Book> {
+    return this.http.post<Book>(this.baseUrl + '/books', book);
+  }
+
+  updateBooks(book: Book): Observable<Book> {
+    console.log(book.isbn);
+    return this.http.put<Book>(this.baseUrl + `/books/${book.isbn}`, book);
+  }
+
+  getBookDetailByIsbn(isbn: string): Observable<Book> {
     return this.http.get<Book>(this.baseUrl + `/books/${isbn}`);
   }
 }
