@@ -10,6 +10,7 @@ import { InfoBoxComponent } from './info-box/info-box.component';
 import { MouseCursorComponent } from './mouse-cursor/mouse-cursor.component';
 import { TitleBoxComponent } from './title-box/title-box.component';
 import {FormsModule} from '@angular/forms';
+import {Page404Component} from './errorpages/page404/page404.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {FormsModule} from '@angular/forms';
     NavigationComponent,
     InfoBoxComponent,
     MouseCursorComponent,
-    TitleBoxComponent
+    TitleBoxComponent,
+    Page404Component
   ],
   imports: [
     BrowserModule,
