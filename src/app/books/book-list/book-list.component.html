@@ -1,14 +1,11 @@
 <table *ngIf="!errorMessage" class="table">
   <tr>
-    <th>#</th>
-    <th>Title</th>
-    <th>Author</th>
-    <th>Anzahl Seiten</th>
-    <th>Publisher</th>
+    <th></th>
+    <th><h2>{{book.title}}</h2></th>
   </tr>
   <tr *ngFor="let book of bookListe; let i = index">
     <td>{{i}}</td>
-    <td>{{book.title}}</td>
+    <td><a [routerLink]="[book.isbn]">{{book.title}}</a></td>
     <td>{{book.author}}</td>
     <td>{{book.numPages}}</td>
     <td><a href="{{book.publisher.url}}">{{book.publisher.name}}</a></td>

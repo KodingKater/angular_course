@@ -1,0 +1,10 @@
+<table *ngIf="!errorMessage" class="table">
+  <tr>
+    <th><h2>{{bookToShow.title}}</h2></th>
+  </tr>
+  <tr>
+    <td>{{bookToShow.abstract}}</td>
+  </tr>
+</table>
+
+<div style="background-color: #ff2128" *ngIf="errorMessage"><h2>{{errorMessage}}</h2></div>

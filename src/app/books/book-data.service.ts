@@ -8,12 +8,16 @@ import {HttpClient} from '@angular/common/http';
 export class BookDataService {
 
   books: Book[];
-  private baseUrl = 'http://localhost:4730/books';
+  private baseUrl = 'http://localhost:4730';
 
   getBooks(): Observable<Book[]> {
-     return this.http.get<Book[]>(this.baseUrl);
+     return this.http.get<Book[]>(this.baseUrl + '/books');
   }
 
   constructor(private http: HttpClient) {
+  }
+
+  getBookDetailByIsbn(isbn: any): Observable<Book> {
+    return this.http.get<Book>(this.baseUrl + `/books/${isbn}`);
   }
 }
