@@ -8,15 +8,13 @@ const routes: Routes = [{
   path: '',
   pathMatch: 'full',
   redirectTo: '/books'
-},
-  // {
-  //   path: '**',
-  //   redirectTo: '/404'
-  // },
-  {path: 'books/:isbn',
-    component: BookDetailComponent,
-    canDeactivate: [ConfirmCandeactivateGuard]}
-  ];
+  },
+  {
+    path: 'books',
+    loadChildren: () => import('./books/books.module')
+      .then(m => m.BooksModule)
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
