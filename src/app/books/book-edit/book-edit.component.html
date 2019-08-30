@@ -17,3 +17,4 @@
   <div [hidden]="!title.errors?.required || title.pristine"></div>
   <button (click)="save(book)">SAVE</button>
 </form>
+{{book|json}}
