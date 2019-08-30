@@ -8,10 +8,8 @@ import {Component, EventEmitter, Output} from '@angular/core';
 export class AppComponent {
 
   title = 'CoolNewProject';
-  superFancyOtherTitle = 'BookListe 9000';
 
   onTitleClick(event: string) {
-    // this.superFancyOtherTitle = event;
     console.log(event);
   }
 }
